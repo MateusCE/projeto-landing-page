@@ -69,20 +69,38 @@
 
 #div-cards {
     display: flex;
-    align-items: center;
+    grid-auto-flow: column;
     justify-content: center;
     gap: 20px;
 }
 
 .card {
-    margin: 0 25px;
+    min-width: 280px;
+    height: 200px; /* Altura fixa para cada card */
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transform: translateY(0); /* Garante posição inicial */
+    transition: transform 0.3s ease; /* Suaviza qualquer mudança */
 }
 
 /* Removido #controles-carrossel pois não está sendo usado */
 
-.seta {
-    cursor: pointer;
-    transition: transform 0.5s ease;
+#seta-esquerda {
+    display: none;
+    margin-bottom: 0%;
+}
+
+#Bruna{
+    display: none;
+}
+
+.seta{
+margin-bottom: 4%;
+cursor: pointer;
 }
 
 .seta:hover {
